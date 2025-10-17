@@ -77,16 +77,15 @@ export default function Footer() {
             © {currentYear} {BRAND_NAME}. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            {Object.entries(SOCIAL_LINKS).map(([platform, link]) => (
-              <a
-                key={platform}
-                href={link}
-                aria-label={platform}
-                className="text-gray-400 hover:text-accent-400 transition-colors"
-              >
-                <span className="capitalize">{platform}</span>
-              </a>
-            ))}
+            <a
+              href={SOCIAL_LINKS.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-gray-400 hover:text-accent-400 transition-colors font-medium"
+            >
+              Follow on Instagram
+            </a>
           </div>
         </div>
       </div>

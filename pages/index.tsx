@@ -15,11 +15,11 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-10">
           <img
-            src={`/images/product/${HERO_IMAGE}`}
+            src="/images/logo/fulllogo_transparent_nobuffer.png"
             alt="Hero background"
-            className="w-full h-full object-cover opacity-25"
+            className="w-full h-full object-contain max-w-2xl"
           />
         </div>
 
@@ -112,18 +112,31 @@ export default function Home() {
               Product Gallery
             </h3>
             <div className="w-20 h-1 bg-gradient-to-r from-primary-700 to-accent-600 mx-auto mb-12 rounded-full"></div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {PRODUCT_GALLERY_IMAGES.slice(0, 9).map((image, index) => (
-                <div key={index} className="card overflow-hidden group cursor-pointer hover:shadow-2xl">
-                  <div className="overflow-hidden h-80 bg-gray-100">
-                    <img
-                      src={`/images/product/${image}`}
-                      alt={`Product view ${index + 1}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
+            
+            <div className="space-y-12">
+              {/* Product Video Demo - Full Width */}
+              <div className="card overflow-hidden hover:shadow-2xl">
+                <div className="w-full bg-black">
+                  <video
+                    width="100%"
+                    height="auto"
+                    controls
+                    className="w-full"
+                  >
+                    <source src="/images/product/product-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-              ))}
+              </div>
+
+              {/* Scrolling Gallery Image - Full Natural Height */}
+              <div className="card overflow-hidden hover:shadow-2xl">
+                <img
+                  src="/images/product/gallery-full.png"
+                  alt="Product Gallery"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -77,10 +77,7 @@ export const ABOUT_PRODUCT_IMAGE = 'rapid retailers A+-01.png';
 
 // Social Media
 export const SOCIAL_LINKS = {
-  facebook: '#',
-  instagram: '#',
-  pinterest: '#',
-  twitter: '#',
+  instagram: 'https://www.instagram.com/haus.of.charm/',
 };
 
 // Google Form Embed Code for Warranty Registration
