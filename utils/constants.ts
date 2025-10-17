@@ -58,15 +58,8 @@ export const PRIMARY_PRODUCT = {
 
 // Product Gallery Images - High quality listing/A+ Content images
 export const PRODUCT_GALLERY_IMAGES = [
+  // Only the first image is currently used on the homepage
   'rapid retailers A+-01.png',
-  'rapid retailers A+-02.png',
-  'rapid retailers A+-03.png',
-  'rapid retailers A+-04.png',
-  'rapid retailers A+-05.png',
-  'Rapid Retailers Listing Images (1).png',
-  'Rapid Retailers Listing Images-01.png',
-  'Rapid Retailers Listing Images-02.png',
-  'Rapid Retailers Listing Images-03.png',
 ];
 
 // Hero Image
