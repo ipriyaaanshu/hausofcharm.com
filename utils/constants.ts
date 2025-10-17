@@ -89,3 +89,11 @@ export const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Warranty', href: '/warranty' },
 ];
+
+// Base path aware asset helper for GitHub Pages project sites.
+// Reads NEXT_PUBLIC_BASE_PATH at runtime (injected by workflow) or falls back to ''.
+export const asset = (path: string): string => {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  if (!path.startsWith('/')) return `${base}/${path}`;
+  return `${base}${path}`;
+};

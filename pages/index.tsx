@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { BRAND_NAME, BRAND_TAGLINE, BRAND_DESCRIPTION, PRIMARY_PRODUCT, PRODUCT_GALLERY_IMAGES, HERO_IMAGE } from '@/utils/constants';
+import { BRAND_NAME, BRAND_TAGLINE, BRAND_DESCRIPTION, PRIMARY_PRODUCT, PRODUCT_GALLERY_IMAGES, HERO_IMAGE, asset } from '@/utils/constants';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 overflow-hidden">
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-10">
           <img
-            src="/images/logo/fulllogo_transparent_nobuffer.png"
+            src={asset('/images/logo/fulllogo_transparent_nobuffer.png')}
             alt="Hero background"
             className="w-full h-full object-contain max-w-2xl"
           />
@@ -59,7 +59,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
                 <img
-                  src={`/images/product/${PRODUCT_GALLERY_IMAGES[0]}`}
+                  src={asset(`/images/product/${PRODUCT_GALLERY_IMAGES[0]}`)}
                   alt={PRIMARY_PRODUCT.name}
                   className="w-full max-w-md rounded-xl"
                 />
@@ -123,7 +123,7 @@ export default function Home() {
                     controls
                     className="w-full"
                   >
-                    <source src="/images/product/product-demo.mp4" type="video/mp4" />
+                    <source src={asset('/images/product/product-demo.mp4')} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -132,7 +132,7 @@ export default function Home() {
               {/* Scrolling Gallery Image - Full Natural Height */}
               <div className="card overflow-hidden hover:shadow-2xl">
                 <img
-                  src="/images/product/gallery-full.png"
+                  src={asset('/images/product/gallery-full.png')}
                   alt="Product Gallery"
                   className="w-full h-auto"
                 />

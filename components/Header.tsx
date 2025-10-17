@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { BRAND_NAME, NAV_LINKS } from '@/utils/constants';
+import { BRAND_NAME, NAV_LINKS, asset } from '@/utils/constants';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Header() {
         {/* Logo and Brand Name */}
         <Link href="/" className="flex items-center gap-2 md:gap-3">
           <img
-            src="/images/logo/icononly_nobuffer.png"
+            src={asset('/images/logo/icononly_nobuffer.png')}
             alt={BRAND_NAME}
             className="h-10 md:h-12 w-auto"
           />

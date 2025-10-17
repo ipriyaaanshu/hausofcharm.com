@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { BRAND_NAME, BRAND_STORY, BRAND_VALUES, PRIMARY_PRODUCT, ABOUT_PRODUCT_IMAGE } from '@/utils/constants';
+import { BRAND_NAME, BRAND_STORY, BRAND_VALUES, PRIMARY_PRODUCT, ABOUT_PRODUCT_IMAGE, asset } from '@/utils/constants';
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-primary-50 to-accent-50 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img
-            src={`/images/product/${ABOUT_PRODUCT_IMAGE}`}
+            src={asset(`/images/product/${ABOUT_PRODUCT_IMAGE}`)}
             alt="Lifestyle background"
             className="w-full h-full object-cover"
           />
@@ -88,7 +88,7 @@ export default function About() {
             <div className="flex justify-center order-2 md:order-1">
               <div className="relative p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl shadow-xl">
                 <img
-                  src={`/images/product/${ABOUT_PRODUCT_IMAGE}`}
+                  src={asset(`/images/product/${ABOUT_PRODUCT_IMAGE}`)}
                   alt={PRIMARY_PRODUCT.name}
                   className="w-full max-w-md rounded-xl"
                 />

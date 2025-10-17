@@ -5,6 +5,7 @@ import {
   CONTACT_ADDRESS,
   CONTACT_CITY_STATE,
   SOCIAL_LINKS,
+  asset,
 } from '@/utils/constants';
 
 export default function Footer() {
@@ -17,7 +18,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <img
-              src="/images/logo/textonly.png"
+              src={asset('/images/logo/textonly.png')}
               alt={BRAND_NAME}
               className="h-12 mb-4"
             />
