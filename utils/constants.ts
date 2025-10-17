@@ -94,6 +94,14 @@ export const NAV_LINKS = [
 // Reads NEXT_PUBLIC_BASE_PATH at runtime (injected by workflow) or falls back to ''.
 export const asset = (path: string): string => {
   const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-  if (!path.startsWith('/')) return `${base}/${path}`;
-  return `${base}${path}`;
+  // Normalize and URL-encode each non-empty segment to support spaces and '+' in filenames
+  const withLeadingSlash = path.startsWith('/') ? path : `/${path}`;
+  const encoded = withLeadingSlash
+    .split('/')
+    .map((segment, index) => {
+      if (segment === '' && index === 0) return ''; // preserve leading slash
+      return encodeURIComponent(segment);
+    })
+    .join('/');
+  return `${base}${encoded}`;
 };
