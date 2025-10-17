@@ -145,7 +145,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-primary-900 via-primary-800 to-accent-700 text-white">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">
             Own Your Haus of Charm
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
